@@ -1,0 +1,134 @@
+# Carrara Breeze — native Omarchy shell theme.
+# Charcoal UI surfaces stay separate from the pure-black terminal palette.
+# Based on the installed Omarchy 4.5 shell template.
+
+[bar]
+background       = "#202326"
+background-alpha = 1.0
+text             = "#fcfcfc"
+active           = "#da4453"
+scale-with-font  = true
+size-horizontal  = 24
+size-vertical    = 28
+
+[hyprland]
+active-border            = "#9b7ac4"
+active-border-foreground = "#9b7ac4"
+
+[controls]
+
+normal-color        = "#fcfcfc"
+normal-fill-alpha   = 0.04
+normal-border       = "#fcfcfc"
+normal-border-width = 1
+normal-border-alpha = 0.4
+
+hover-cursor-color        = "#b59ad7"
+hover-cursor-fill-alpha   = 0.08
+hover-cursor-border       = "#fcfcfc"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 0.25
+
+focus-color        = "#b59ad7"
+focus-fill-alpha   = 0.08
+focus-border       = "#fcfcfc"
+focus-border-width = 1
+focus-border-alpha = 0.25
+
+selected-color        = "#b59ad7"
+selected-fill-alpha   = 0.24
+selected-border       = "#fcfcfc"
+selected-border-width = 0
+selected-border-alpha = 1.0
+
+pressed-fill-alpha   = 0.22
+selection-fill-alpha = 0.35
+
+[spacing]
+scale = 1.0
+scale-with-font = true
+
+[font]
+base-size = 12
+
+[popups]
+background       = "#202326"
+background-alpha = 1.0
+text             = "#fcfcfc"
+border           = "hyprland.active-border"
+border-alpha     = 1.0
+
+[tooltip]
+background       = "#292c30"
+background-alpha = 1.0
+text             = "#fcfcfc"
+border           = "hyprland.active-border-foreground"
+border-alpha     = 1.0
+
+[notifications]
+background       = "#202326"
+background-alpha = 1.0
+text             = "#fcfcfc"
+border           = "hyprland.active-border"
+border-alpha     = 1.0
+countdown        = "#9b7ac4"
+
+[launcher]
+background                = "#202326"
+background-alpha          = 1.0
+text                      = "#fcfcfc"
+border                    = "hyprland.active-border-foreground"
+border-alpha              = 1.0
+scrim                     = "#111215"
+scrim-alpha               = 0.5
+selected-background       = "#9b7ac4"
+selected-background-alpha = 0.24
+selected-text             = "#eff0f1"
+selected-border           = "#9b7ac4"
+selected-border-alpha     = 0.25
+
+[menu]
+background                = "#202326"
+background-alpha          = 1.0
+text                      = "#fcfcfc"
+border                    = "hyprland.active-border-foreground"
+border-alpha              = 1.0
+scrim                     = "#111215"
+scrim-alpha               = 0.5
+selected-background       = "#9b7ac4"
+selected-background-alpha = 0.24
+selected-text             = "#eff0f1"
+selected-border           = "#9b7ac4"
+selected-border-alpha     = 0.25
+
+[polkit]
+background       = "#202326"
+background-alpha = 1.0
+text             = "#fcfcfc"
+text-error       = "#da4453"
+border           = "hyprland.active-border"
+border-error     = "#da4453"
+border-alpha     = 1.0
+scrim            = "#000000"
+scrim-alpha      = 0.5
+accent           = "#9b7ac4"
+
+[lock]
+background       = "#202326"
+background-alpha = 1.0
+text             = "#fcfcfc"
+placeholder      = "#818384"
+text-error       = "#da4453"
+border           = "hyprland.active-border"
+border-active    = "hyprland.active-border"
+border-error     = "#da4453"
+border-alpha     = 1.0
+selection        = "#9b7ac4"
+selection-alpha  = 0.45
+
+[image-picker]
+text                    = "#fcfcfc"
+selected-border         = "#9b7ac4"
+selected-border-alpha   = 1.0
+unselected-border       = "#fcfcfc"
+unselected-border-alpha = 0.28

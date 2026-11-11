@@ -1,0 +1,38 @@
+# Carrara Breeze: Breeze-inspired shell with Moonfly terminal/editor colors.
+# Moonfly palette: https://github.com/bluz71/vim-moonfly-colors
+# Desktop violet accent is visually matched to the live, not an exported KDE setting.
+mode = "dark"
+
+accent = "#9b7ac4"
+selection = "#323437"
+selection_foreground = "#eeeeee"
+muted = "#626262"
+
+background = "#000000"
+dark_background = "#121212"
+darker_background = "#080808"
+lighter_background = "#323437"
+
+foreground = "#bdbdbd"
+dark_foreground = "#808080"
+light_foreground = "#c6c6c6"
+bright_foreground = "#e4e4e4"
+
+red = "#ff5d5d"
+yellow = "#e3c78a"
+orange = "#de935f"
+green = "#8cc85f"
+cyan = "#79dac8"
+blue = "#80a0ff"
+magenta = "#cf87e8"
+brown = "#805b45"
+
+bright_red = "#ff5189"
+bright_yellow = "#c6c684"
+bright_green = "#36c692"
+bright_cyan = "#85dc85"
+bright_blue = "#74b2ff"
+bright_magenta = "#ae81ff"
+
+hyprland_active_border = "#9b7ac4"
+hyprland_inactive_border = "#3b3d43"
