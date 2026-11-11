@@ -10,6 +10,12 @@ plugin manager with `bluz71/vim-moonfly-colors`, set
 `vim.g.moonflyItalics = false` and `vim.g.moonflyTransparent = true` before
 loading `moonfly`, and select `codedark` in lualine.
 
+The ready-to-use companion is [extras/zz-carrara-breeze.lua](../extras/zz-carrara-breeze.lua).
+The installation command in the main README copies it into LazyVim's personal
+plugin directory. It applies only while this Omarchy theme is selected and
+also handles Omarchy's colorscheme reloads. Remove that one file to uninstall
+the companion. The theme's normal palette continues to work without it.
+
 For LazyVim, the relevant plugin specification is:
 
 ```lua

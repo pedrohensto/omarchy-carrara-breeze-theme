@@ -19,6 +19,24 @@ Then select **Carrara Breeze** in the theme picker (`Super + Ctrl + T`), or run:
 omarchy theme set "Carrara Breeze"
 ```
 
+### Original Moonfly in Neovim
+
+To use Carrara's actual Neovim colorscheme and CodeDark status line, install
+the optional [LazyVim companion](extras/zz-carrara-breeze.lua):
+
+```bash
+curl --fail --location --create-dirs \
+  https://raw.githubusercontent.com/pedrohensto/omarchy-carrara-breeze-theme/main/extras/zz-carrara-breeze.lua \
+  --output ~/.config/nvim/lua/plugins/zz-carrara-breeze.lua
+```
+
+Restart Neovim. Lazy installs the original `bluz71/vim-moonfly-colors` plugin.
+The companion selects Moonfly without italics, with a transparent background,
+and the CodeDark lualine theme only while Carrara Breeze is active. Switching
+Omarchy themes restores the normal theme behavior. Existing keymaps and editor
+tools are retained. Enable Treesitter for the language you edit for proper
+type, variable and function captures.
+
 ## Appearance
 
 - Charcoal shell surfaces based on KDE Breeze Dark's Plasma 6.6.4 palette.
@@ -36,17 +54,17 @@ font, editor extension or executable hook is installed.
 This is an adaptation, not Carrara's exported desktop configuration. His current
 public Neovim configuration uses **Moonfly** with no italics and a transparent
 background, plus **CodeDark** for lualine. The distributed theme uses Omarchy's
-generated Aether colorscheme with Moonfly colors; it does not install Moonfly
-or reproduce every Moonfly highlight group.
+generated Aether colorscheme with Moonfly colors unless the optional companion
+above is installed. The companion uses Moonfly's original highlight groups.
 
 Omarchy strips Lua and terminal configuration overrides when installing a theme
 from a repository. Therefore the published theme keeps to `colors.toml`,
 `shell.toml`, icons and backgrounds. Optional exact Moonfly/CodeDark and compact
 window settings are documented in [Local options](docs/LOCAL-OPTIONS.md).
 
-The preview shows the distributed palette in a real Omarchy session, with
-Alacritty and Neovim using the generated Aether colorscheme. Window geometry
-and font sizes in the screenshot are local presentation settings.
+The preview shows a real Omarchy session with Alacritty and Neovim using the
+optional original Moonfly companion, CodeDark and C Treesitter highlighting.
+Window geometry and font sizes in the screenshot are local presentation settings.
 
 See [References](docs/REFERENCES.md) for verified sources and the remaining
 visual approximations. Tested on Omarchy 4.5.0-3.
