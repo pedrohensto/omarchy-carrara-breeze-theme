@@ -32,7 +32,8 @@ curl --fail --location --create-dirs \
 
 Restart Neovim. Lazy installs the original `bluz71/vim-moonfly-colors` plugin.
 The companion selects Moonfly without italics, with a transparent background,
-and the CodeDark lualine theme only while Carrara Breeze is active. Switching
+and the CodeDark lualine theme only while Carrara Breeze is active. Its status
+line keeps a continuous background even with local transparency hooks. Switching
 Omarchy themes restores the normal theme behavior. Existing keymaps and editor
 tools are retained. Enable Treesitter for the language you edit for proper
 type, variable and function captures.
@@ -64,7 +65,8 @@ window settings are documented in [Local options](docs/LOCAL-OPTIONS.md).
 
 The preview shows a real Omarchy session with Alacritty and Neovim using the
 optional original Moonfly companion, CodeDark and C Treesitter highlighting.
-Window geometry and font sizes in the screenshot are local presentation settings.
+It also uses optional 90% terminal background opacity. Window geometry and font
+sizes in the screenshot are local presentation settings.
 
 See [References](docs/REFERENCES.md) for verified sources and the remaining
 visual approximations. Tested on Omarchy 4.5.0-3.

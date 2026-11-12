@@ -53,3 +53,22 @@ hl.config({
 
 These values are an Omarchy adaptation, not exported Kröhnkite settings. Keep
 your preferred layout and keybindings.
+
+## Light terminal translucency
+
+The preview uses 90% native background opacity (10% transparency). The terminal
+text stays fully opaque, and Moonfly's transparent background lets the wallpaper
+show through the editor. CodeDark's statusline keeps its own continuous surface.
+
+Set the relevant option in your terminal's personal configuration:
+
+| Terminal | Setting |
+| --- | --- |
+| Ghostty | `background-opacity = 0.90` |
+| Alacritty | `opacity = 0.90` under `[window]` |
+| Kitty | `background_opacity 0.90` |
+| Foot | `alpha=0.90` under `[colors-dark]` |
+
+These are optional personal settings, not automatically installed by the theme.
+On a handwritten local theme, they can instead live in its terminal configuration
+overrides; repository-installed themes regenerate those files from the palette.

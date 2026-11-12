@@ -21,6 +21,33 @@ return {
       vim.g.moonflyItalics = false
       vim.g.moonflyTransparent = true
       local group = vim.api.nvim_create_augroup("CarraraBreezeAppearance", { clear = true })
+      local function statusline_background()
+        if not active() then
+          return
+        end
+        -- Components such as Trouble reset to StatusLine between symbols.
+        -- Keep those spaces on CodeDark's surface even when a local
+        -- transparency hook clears the default statusline background.
+        local middle = vim.api.nvim_get_hl(0, { name = "lualine_c_normal", link = false })
+        for _, name in ipairs({ "StatusLine", "StatusLineNC" }) do
+          local hl = vim.api.nvim_get_hl(0, { name = name, link = false })
+          hl.bg = middle.bg or 0x262626
+          vim.api.nvim_set_hl(0, name, hl)
+        end
+      end
+      local function refresh_statusline()
+        -- Omarchy reapplies transparency shortly after colorscheme reloads.
+        vim.defer_fn(statusline_background, 30)
+      end
+      vim.api.nvim_create_autocmd({ "VimEnter", "ColorScheme" }, {
+        group = group,
+        callback = refresh_statusline,
+      })
+      vim.api.nvim_create_autocmd("User", {
+        group = group,
+        pattern = { "VeryLazy", "LazyReload" },
+        callback = refresh_statusline,
+      })
       vim.api.nvim_create_autocmd("ColorScheme", {
         group = group,
         callback = function(event)
@@ -33,6 +60,7 @@ return {
           end
         end,
       })
+      refresh_statusline()
     end,
   },
   {
